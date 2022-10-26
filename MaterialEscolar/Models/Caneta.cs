@@ -6,22 +6,22 @@ namespace Models
     public class Caneta
     {
         private string cor; //criando um atribudo privato.
+        private string material;
+        private string marca;
+        private string tipoPonta;
         private double tamanho;
         private double peso;
-        private bool tampada;
-        private int percentualCarga;
-        private string marca;
-        private string material;
         private double ponta;
-        private string tipoPonta;
         private bool caida;
+        private bool tampada;
         private bool estourada;
+        private int percentualCarga;
 
 
         public string Cor //para ter acesso a Cor privata, tem que fazer esse esquema.
         {
-            get { return cor; }
-            set { cor = value; }
+            get { return cor; } // pegar informação
+            set { cor = value; } // inserir informação
         }
         public double Tamanho
         {
@@ -73,6 +73,7 @@ namespace Models
             get { return estourada; }
             set { estourada = value; }
         }
+        // Criando o construtor.
         public Caneta(string _cor, double _tamanho, double _peso, string _marca, string _material, double _ponta, string _tipoPonta)
         {
             Cor = _cor;
@@ -83,6 +84,30 @@ namespace Models
             Ponta = _ponta;
             TipoPonta = _tipoPonta;
    
+        }
+        public void Tampar()
+        {
+            tampada = true;
+        }
+        public void Destampada()
+        {
+            tampada = false;
+        }
+        public void Escrever(string _texto)
+        {
+            if(tampada == true) // ou pode usar dessa outra forma. ->  if(tampada) { }
+            {
+                Console.WriteLine("Não pode escrever com a caneta tampada!");
+                return;
+            }
+            Console.WriteLine(_texto);
+        }
+        public void Exibir()
+        {
+            Console.WriteLine("Cor: " + cor);
+            Console.WriteLine("Tamanho: " + tamanho);
+            Console.WriteLine("Peso: " + peso);
+
         }
 
     }
