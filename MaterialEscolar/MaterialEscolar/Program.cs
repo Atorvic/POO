@@ -29,10 +29,11 @@ internal class Program
         Models.Apontador apontador = new Models.Apontador(10,"Vermelho","ferro");
         apontador.Exibir();
 
+        Console.WriteLine("\n");
+        Console.WriteLine("-----Caderno-----");
 
-
-
-
+        Models.Caderno caderno = new Models.Caderno(10, "Caderno Novo", 12, 10.5);
+        caderno.Exibir();
 
     }
 }
