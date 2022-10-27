@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Models
 {
-    internal class Caderno
+    public class Caderno
     {
         private int folhas;
         private string nome;

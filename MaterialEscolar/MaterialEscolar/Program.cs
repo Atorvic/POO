@@ -34,6 +34,6 @@ internal class Program
 
         Models.Caderno caderno = new Models.Caderno(10, "Caderno Novo", 12, 10.5);
         caderno.Exibir();
-
+        caderno.Exibir();
     }
 }
