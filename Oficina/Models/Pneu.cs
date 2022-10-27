@@ -4,7 +4,7 @@
     {
         private string marca;
         private double dureza;
-        private double aro;
+        private int aro;
         private bool furado;
         
         public string Marca
@@ -17,7 +17,7 @@
             get { return dureza; }
             set { dureza = value; }
         }
-        public double Aro
+        public int Aro
         {
             get { return aro; }
             set { aro = value; }
@@ -26,6 +26,13 @@
         {
             get { return furado; }
             set { furado = value; }
+        }
+        public Pneu(string _marca, int _aro)
+        {
+            Marca = _marca;
+            Dureza = 100;
+            Aro = _aro;
+            Furado = false;
         }
 
 
