@@ -147,5 +147,9 @@
         {
             Tanque += _quantidade;
         }
+        public void TrocarPneu(Pneu _pneuDianteiroEsquerdo)
+        {
+            PneuTrazeiroEsquerdo = _pneuDianteiroEsquerdo;
+        }
     }
 }

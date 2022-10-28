@@ -83,7 +83,7 @@
         {
             Rotacao -= _abatimento;
             GastarBorracha(_abatimento / 100.0);
-            if(Rotacao < 0)
+            if(Rotacao <= 0)
             {
                 Rotacao = 0;
             }
